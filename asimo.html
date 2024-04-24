@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASIMO</title>
+<style>
+    /* Center the page */
+    .center-page {
+        width: 50%; /* Adjust this value to set the width of your centered page */
+        margin: 0 auto; /* This centers the element horizontally */
+        padding: 20px; /* Add padding on both sides */
+        background-color: #1f1f1f; /* Just for visualization */
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* This centers the image horizontally */
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 50%; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #1f1f1f;
+        color: #ffffff
+    }
+
+</style>
+</head>
+<body>
+    <div class="center-page">
+        <h1>ASIMO</h1>
+        <h2>2000 (Original)</h2>
+        <div class="center-image">
+            <img src="asimo/asimo2000_01.jpg" class="center-image">
+        </div>
+        <p>On November 20th, 2000, Honda announced ASIMO which stands for "Advanced Step in Innovative MObility". ASIMO was developed at Honda's Research & Development Wako Fundamental Technical Research Center in Japan. With the look of a spaceman and the height of a child, it was developed with a purpose in mind, to be a helper to humans in every day life. Being just the right size to operate in a home or office environment and range of motion to reach doorknobs and light switches. ROBODEX 2000, three days after ASIMO's unveiling, was it's first general public appearance. On December 21st, it would be announced that Honda would start <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/article/20001221/honda.htm">renting out</a> ASIMO units in fall of 2001 for $150,000 a month.</p>
+        <br>
+        <div class="center-image">
+            <img src="asimo/asimo2000_03.png" class="center-image">
+        </div>
+        <p>ASIMO stands 120 cm tall and weighs 43 kg. Coming from P3, reducing height from 160 cm to 120 cm, they were able to find more weight reductions through thinning the internal skeletal structure and frame thickness, and also by reducing the control unit size, rather than it being just a scaled down version of the P3.</p>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/82JFCciO3E4?si=PEW2TEo0IPCsPMGM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- <p><a style="color:#1e63c9;" href="https://pc.watch.impress.co.jp/docs/article/20001221/honda.htm">source</a></p>
+        <p><a style="color:#1e63c9;" href="https://ascii.jp/elem/000/000/318/318406/">source</a></p>
+        <p><a style="color:#1e63c9;" href="https://pc.watch.impress.co.jp/docs/article/20001120/honda.htm">source</a></p>
+        <p><a style="color:#1e63c9;" href="https://pc.watch.impress.co.jp/docs/article/20001221/honda.htm">source</a></p>
+        <p><a style="color:#1e63c9;" href="https://science.howstuffworks.com/asimo.htm#pt1">source</a></p>
+        <p><a style="color:#1e63c9;" href="https://www.researchgate.net/publication/3972237_The_intelligent_ASIMO_System_overview_and_integration">source</a></p> -->
+        <br><br>
+        <h3>Mobility</h3>
+        <div class="center-image">
+            <img src="asimo/asimo2000_04.jpg" class="center-image">
+        </div>
+        <p>i-WALK (Intelligent Real-Time Flexible Walking). The technology behind ASIMO's (at the time never before seen) capabilities, enables smooth and continuous walking and changes in direction. When humans approach a sharp corner while walking, we don't walk up next to it, stop, turn , then continue walking. We shift our center of gravity in towards the corner, walking in a continuous, curved motion. Using 6-axis force sensors in the feet and gyro/acceleration sensors in the torso, its possible to predict where it's center of gravity will be while walking, adjusting its current center of gravity to compensate in real-time. Enabling walking speeds of up to 1.6 km/h.</p>
+        <p>It's movement capabilities include walking, crab walking, diagonal walking, turning in place, and cornering. However, these movements were limited to 2D terrain, with the exception of specially designed stairs that were built with millimeter accuracy in mind. 3D terrain adaptability had not been implemented.</p>
+        <h3>Internal Structure</h3>
+        <div class="center-image">
+            <img src="asimo/ASIMOuncovered.jpg" class="center-image">
+        </div>
+        <p>On November 16th, 2001 at <a style="color:#1e63c9"; href="https://ascii.jp/elem/000/000/327/327471/">Robo Festa Kanagawa 2001</a>, we got a good look inside of what makes up ASIMO's internal structure. Even though the ASIMO 2001 had been announced by this point, the one being displayed is the ASIMO 2000 as it still has the cable conduits running to the back of the legs, which are not present on ASIMO 2001.</p>
+        <p>Starting off, the skeletal structure is made from a light weight, high strength magnesium alloy, with the exterior shell (not present) made up of plastic resin. It has 26 degrees of freedom (DoF). Compared to P3, the shoulder joint was now attached at a 20 degree angle, making it possible to raise it's arms higher than it's shoulders.</p>
+        <div class="center-image">
+            <img src="asimo/torso.jpg" class="center-image">
+        </div>
+        <p>At the torso, we can see the 38.4V 10 Ah Ni-MH battery in white plastic, and its location giving it a good center of gravity. Average run time was approximately 30 minutes, with charging taking 4 hours. However, with it's battery being located in it's lower torso, it could quickly be replaced with a fully charged one. The battery made up 18% of the total weight, weighing in at 7.7 kg and is the single heaviest component. A 100V AC/15A outlet is necessary to charge the cells or to run tethered.</p>
+        <p>Each hand having 1 DoF, the fingers are wire-driven with a gripping force was 0.5 kg. When trying to grip an object, the index finger starts to close. Once it has made contact with the object, the next finger closes, and so on.</p>
+        <div class="center-image">
+            <img src="asimo/backpack1.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/backpack2.jpg" class="center-image">
+        </div>
+        <p>Now, located in the backpack is where everything really happens. At the top is where the main computer lives. There are is an undisclosed number of CPUs onboard. Wireless antennas can be seen on both sides of its enclosure. Below are power supplies with four Sanyo Denki San Ace MC cooling fans placed on each side of the enclosure.</p>
+        <p>Another thing you can see from this angle, directly below where the battery is located is how the hip's yaw axis is driven. The motor is not attached to the torso, but instead what looks like a canister attached at the hip structure, meaning that each leg is self contained (functionality wise), and probably makes it easier for maintenance.</p>
+        <div class="center-image">
+            <img src="asimo/thigh.jpg" class="center-image">
+        </div>
+        <p>As you can see, power is transmitted to the knee through a belt, with the motor located in its upper thigh. You can also see the same mechanism for the ankle's pitch axis and for the hip's roll axis. The hip's pitch axis is most likely directly driven, with its location being in the center of that hip joint.</p>
+        <div class="center-image">
+            <img src="asimo/head.jpg" class="center-image">
+        </div>
+        <p>And lastly, we take a look at its head. We can see its components relating to its mechanisms for the head motion. At this stage ASIMO isn't equipped with CCD cameras where its eyes are located. It's eyes are purely for aesthetic purposes.</p>
+        <div class="image-container">
+            <img src="asimo/14042.jpg">
+            <img src="asimo/14043.jpg">    
+        </div>
+        <p>Each actuator consisted of a servo motor, harmonic reducer, and a drive unit. 12 of the motors and drivers are from <a style="color:#1e63c9"; href="https://response.jp/article/2001/11/07/12984.html">Mitsuba</a>, making up over 40% of the actuators used throughout ASIMO's body. Mitsuba developed custom DC brushless motors for use in the lower half of ASIMO, with key requirements being ease of control and responsiveness.</p>
+        <h3>Controls</h3>
+        <div class="center-image">
+            <img src="asimo/controller2.jpg" class="center-image">
+        <div class="center-image">
+            <img src="asimo/controller3.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/controller4.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/controller5.jpg" class="center-image">
+        </div>
+        <p>This <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/article/20001120/honda.htm">prototype mobile controller</a> was seen being used at ASIMO's announcement demonstration. It consists of a computer running Windows attached at the waist and a game console controller used to direct its actions.</p>
+        <h3>Variations</h3>
+        <div class="center-image">
+            <img src="asimo/blue_face2.png" class="center-image">
+        </div>
+        <p>The color variations include gray, red, green, and blue. There is also a unique one that has an entirely different head, featuring it's large eyes and a smiling mouth that are usually hidden behind it's visor, but now on full display. This new design was shown off during the the rentals announcement.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qPVrCLYLvsc?si=b3ikgH54yq938B0x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="center-image">
+            <img src="asimo/firstep_01.jpg" class="center-image">
+        </div>
+        <p>Honda International Technical School (HITS), with their robot "Firstep", a modified ASIMO 2000 prototype, competing at RoboCup Japan Open 2003 Niigata. They would then attend RoboCup World Tournament 2003 Italy, and come in first, winning the Louis Vuitton Cup.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpUK9t_uM3E?si=0cvRkOYE-Ka4BWoJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>This was the first time a team outside of Honda R&D were allowed to work on the ASIMO platform. It was designed to kick a soccer ball by hitting it through it's walking gait.</p>
+        <div class="center-image">
+            <img src="asimo/firstep_03.jpg" class="center-image">
+        </div>
+        <p>Firstep's height is 125 cm and weights 50 kg. Replacing ASIMO's head was a custom head with a screen for a face, displaying animated expressions like the one above. There was also a custom enclosure for the backpack with upgraded wireless communication antennas, but was reverted back to the original for Italy.</p>
+        <h2>2001 (Software Revision)</h2>
+        <p>On November 12th, 2001, an <a style="color:#1e63c9"; href="https://global.honda/en/newsroom/news/2001/c011112-eng.html">announcement</a> of a new ASIMO model was made. However it was clear that this was more of a refinement of ASIMO 2000. With one of the major improvements being a reduction in startup time from 40 minutes to 4 minutes. The time reduction comes from automating a lot of the manual tasks previously needed during startup. Another would be the improvement of the i-WALK technology, adding the capability of walking in three dimensions. This added the ability to climb stairs and slopes. Yes, ASIMO 2000 had the ability to climb stairs, however every stair had to be within <a style="color:#1e63c9"; href="https://ascii.jp/elem/000/000/327/327357/">millimeter</a> spec to each other, leaving no room for error. If one step was a little higher than the other, ASIMO could not adapt to it, leading to it falling over.</p>
+        <p>ASIMO now had a better sense of it's surroundings, with the addition of a CCD camera positioned between the legs to track markers placed on the ground, making positioning easier and more accurate. It was also now possible to process voice commands and detect direction of sound sources.</p>
+        <p>Two last improvements, now there no need for workstation PC to handle offline tasks, as software and hardware had progressed to where only a laptop was necessary. And lastly, the cable conduit that ran from the backpack to the back of the legs has been removed.</p>
+        <h2>2002 (Sortware Revision)</h2>
+        <div class="center-image">
+            <img src="asimo/pointing.jpg" class="center-image">
+        </div>
+        <p>On December 5th, 2002, ASIMO was <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/2002/1205/honda.htm">upgraded</a> to track and recognize faces, and follow human gestures, like moving to where someone is pointing to or halting in place. It could also recognize the <a style="color:#1e63c9"; href="https://global.honda/jp/ASIMO/history/asimo/technology2002/index.html">posture</a> of a person and recognize its environment. Also, with added internet connectivity, it was able to provide news and weather updates.</p>
+        <p>The overall system architecture as been redeveloped. For preplanned routes, ASIMO interfaces with a external map management system located offline. It can also trigger dialogue and other tasks at given locations. However onboard, 3 separate processors handle image processing, speech recognition and synthesis, and control and planning respectively. A frame grabber is connected to the vision computer via a PCI bus.</p>
+        <div class="center-image">
+            <img src="asimo/wired7.jpg" class="center-image">
+        </div>
+        <p>The image pipeline consisted of stereo SONY XC-ES alternate 1/3" color CCDs, with a depth map generated using a SAD (Sum of Absolute values of Differences) based method on a Mobile Pentium III-M 1.2GHz. 3D objects and moving objects are then extracted by taking images from the frame grabber and processing them on the vision computer, sending necessary data to the navigation and interaction systems. In order to calculate distance and direction of objects in a scene, the image had to be synchronized with every joint angle, calculating the camera pose. With this, detecting multiple moving objects in an image was now possible. ASIMO stores the extracted objects' bounding boxes in its local map, necessary for obstacle avoidance for planning detours.</p>
+        <div class="center-image">
+            <img src="asimo/wired4.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/wired5.jpg" class="center-image">
+        </div>
+        <p>To track humans, they need to be extracted from the image. An optical flow based algorithm separates the foreground from the image, then Snake algorithm extracts the human shapes, separating multiple people in a scene. Face detection then uses skin color to identify face contours.</p>
+        <p>There are two gesture recognition systems. The first is 2D, recognizing gestures including handshake, hand circling, bye-bye, hand swing, high-hand and come here call. And the second is 3D, recognizing pointing gestures, using the head and hand positional relationship and the depth map to then move to the desired location.</p>
+        <p>ASIMO is capable of storing and identifying about 10 people. The database of faces and the details along with them are stored on the external management system.</p>
+        <p>The planning system is behavior based, allowing flexibility and modularity, making reactive in rapidly changing environments.</p>
+        <div class="center-image">
+            <img src="asimo/wired1.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/wired2.jpg" class="center-image">
+        </div>
+        <div class="center-image">
+            <img src="asimo/wired6.jpg" class="center-image">
+        </div>
+        <p>It was also possible for ASIMO to be <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/2002/1211/honda.htm">connected</a> via direct attach cable for video output of it's vision. It seems to use something like a D-Sub 15 pin display cable.</p>
+        <p>For a more in depth analysis on how each of the onboard systems work together, check out this <a style="color:#1e63c9;" href="https://www.researchgate.net/publication/3972237_The_intelligent_ASIMO_System_overview_and_integration">paper</a>.</p>
+        <p>As of February 21st, 2002 in an article by <a style="color:#1e63c9;" href="https://www.forbes.com/2002/02/21/0221tentech.html?sh=2b10ba9bf3eb">Forbes</a>, it was revealed that 20 ASIMO units had been built up to that point, all hand assembled in their research facility in Wako, Japan. It was also revealed that a single unit costs just under $1 million to make.</p>
+    </div>
+</body>
+</html>
