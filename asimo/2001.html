@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASIMO 2001</title>
+<style>
+    /* Center the page */
+    .center-page {
+        width: 50%; /* Adjust this value to set the width of your centered page */
+        margin: 0 auto; /* This centers the element horizontally */
+        padding: 20px; /* Add padding on both sides */
+        background-color: #ffffff; /* Just for visualization */
+    }
+
+    @media (max-width: 600px) {
+        .center-page {
+            padding: 0; /* Remove padding on mobile */
+        }
+    } 
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* This centers the image horizontally */
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 50%; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .video-wrapper {
+        position: relative;
+        height: 0;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .aspect-16-9 {
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .aspect-4-3 {
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    }
+
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000
+    }
+
+</style>
+</head>
+<body>
+    <div class="center-page">
+        <div class="center-text">
+            <h1>ASIMO</h1>
+        </div>
+        <table style="width:100%">
+            <tr>
+                <th><a style="color:#1e63c9;" href="2000.html">2000</a></th>
+                <th><a style="color:#1e63c9;" href="2001.html">2001</a></th>
+                <th><a style="color:#1e63c9;" href="2002.html">2002</a></th>
+                <th><a style="color:#1e63c9;" href="2003.html">2003</a></th>
+                <th><a style="color:#1e63c9;" href="2004.html">2004</a></th>
+                <th><a style="color:#1e63c9;" href="2005.html">2005</a></th>
+                <th><a style="color:#1e63c9;" href="2007.html">2007</a></th>
+                <th><a style="color:#1e63c9;" href="2011.html">2011</a></th>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <h2>2001 (Software/Hardware Revision)</h2>
+            <img src="2001/01.jpg" class="center-image">
+            <p>On November 12th, 2001, an announcement of a new ASIMO model was made.<sup><a style="color:#1e63c9"; href="#cite_note-01">[1]</a></sup> However it was clear that this was more of a refinement of ASIMO 2000.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Hardware</h3>
+            <div class="image-container">
+                <img src="2001/02.jpg">
+                <img src="2001/03.jpg">    
+            </div>
+            <p>There were three changes to the hardware. First was the addition of a CCD camera positioned between the legs. This gave ASIMO a better sense of it's surroundings, now being able to track markers placed on the ground, making positioning easier and more accurate.<sup><a style="color:#1e63c9"; href="#cite_note-02">[2]</a></sup> Next, the cable conduit that ran from the backpack to the back of the legs has been removed. And lastly, the design of the backpack changed, becoming sleaker and adding defined ventalation ducts.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Software</h3>
+            <img src="2001/04.jpg" class="center-image">
+            <p>One of the biggest improvements would be to i-WALK, adding the capability of walking in three dimensions, making it possible to climb stairs and slopes. ASIMO 2000 also had the ability to climb stairs, however it was not adaptive. For it to work, every stair had to be within millimeter accuracy.<sup><a style="color:#1e63c9"; href="#cite_note-02">[2]</a></sup></p>
+            <p>Startup time was reduced from 40 minutes to 4 minutes. The time reduction comes from automating the manual tasks previously needed during startup, such as calibrating sensors and actuator limits. Also, the offline tasks can now be run on a single laptop, as software and hardware had progressed so there was no longer need for a workstation PC.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Appearances</h3>
+            February 14, 2002 - ASIMO rings NYSE bell
+        </div>
+        <br>
+        <div>
+            <h3>References</h3>
+            <ol>
+                <li id="cite_note-01"><a style="color:#1e63c9"; href="https://global.honda/en/newsroom/news/2001/c011112-eng.html">Honda Introduces New ASIMO Humanoid Robot for Rental Business</a></li>
+                <li id="cite_note-02"><a style="color:#1e63c9;" href="https://ascii.jp/elem/000/000/327/327357/">Honda unveils "ASIMO" for rental business -- ASIMO becomes a companion!?</a></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

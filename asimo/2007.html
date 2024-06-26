@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASIMO 2007</title>
+<style>
+    /* Center the page */
+    .center-page {
+        width: 50%; /* Adjust this value to set the width of your centered page */
+        margin: 0 auto; /* This centers the element horizontally */
+        padding: 20px; /* Add padding on both sides */
+        background-color: #ffffff; /* Just for visualization */
+    }
+
+    @media (max-width: 600px) {
+        .center-page {
+            padding: 0; /* Remove padding on mobile */
+        }
+    } 
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* This centers the image horizontally */
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 50%; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .video-wrapper {
+        position: relative;
+        height: 0;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .aspect-16-9 {
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .aspect-4-3 {
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    }
+
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000
+    }
+
+</style>
+</head>
+<body>
+    <div class="center-page">
+        <div class="center-text">
+            <h1>ASIMO</h1>
+        </div>
+        <table style="width:100%">
+            <tr>
+                <th><a style="color:#1e63c9;" href="2000.html">2000</a></th>
+                <th><a style="color:#1e63c9;" href="2001.html">2001</a></th>
+                <th><a style="color:#1e63c9;" href="2002.html">2002</a></th>
+                <th><a style="color:#1e63c9;" href="2003.html">2003</a></th>
+                <th><a style="color:#1e63c9;" href="2004.html">2004</a></th>
+                <th><a style="color:#1e63c9;" href="2005.html">2005</a></th>
+                <th><a style="color:#1e63c9;" href="2007.html">2007</a></th>
+                <th><a style="color:#1e63c9;" href="2011.html">2011</a></th>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <h2>2007 (Software Update)</h2>
+            <img src="2007/01.jpg" class="center-image">
+            <p>On December 11th, 2007, another enhancement to ASIMO 2004 was announced, focusing on collaboration between ASIMOs. During the announcement, Honda told the media that they planned on placing two ASIMO units in the lobby of their Aoyama, Tokyo headquarters to perform customer service tasks, starting the next day, December 12th.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Software</h3>
+            <div class="video-wrapper aspect-4-3">
+                <iframe src="https://archive.org/embed/asimo-2007-media-kit-videos/01.mov" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <p>The back bone of this revision is collaboration. And to facilitate this, multiple ASIMO units can be connected to eachother via a network server. Depending where an ASIMO is and where a job needs to be performed, a time optimized schedule is created and different tasks are delegated to different ASIMO units.</p>
+            <div class="video-wrapper aspect-4-3">
+                <iframe src="https://archive.org/embed/asimo-2007-media-kit-videos/04.mov" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+            <p>If ASIMO predicts a person's walking path to intersect it's own, it will move out of the person's path and pass by walking around them. This is also possible in the case where the walking path of two ASIMOs would interect. If there isn't enough space to pass, ASIMO will step back and give the right of way to the person.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Ancillary Equipent</h3>
+            <div class="image-container">
+                <img src="2007/02.jpg">
+                <img src="2007/03.jpg">
+            </div>
+            <p>ASIMO could now automatically locate and dock to a charger when its batteries were low. Since all ASIMOs are connected over the network, if one is in the middle of a task and gets low on charge, another one can assume the role of the other and complete the task, ensuring continuous service without interruption.</p>
+            <div class="video-wrapper aspect-4-3">
+                <iframe src="https://archive.org/embed/asimo-2007-media-kit-videos/06.mov" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h3>Appearances</h3>
+            <p>April 23, 2008 - ASIMO conducts the Detroit Symphony Orchestra</p>
+        </div>
+    </div>
+</body>
+</html>
