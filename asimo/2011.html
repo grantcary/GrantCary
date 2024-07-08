@@ -5,19 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASIMO 2011</title>
 <style>
-    /* Center the page */
-    .center-page {
-        width: 50%; /* Adjust this value to set the width of your centered page */
-        margin: 0 auto; /* This centers the element horizontally */
-        padding: 20px; /* Add padding on both sides */
-        background-color: #ffffff; /* Just for visualization */
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000;
+
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
-    @media (max-width: 600px) {
-        .center-page {
-            padding: 0; /* Remove padding on mobile */
+    .center-page {
+        max-width: 400px; /* Adjust this value as needed for your design */
+        margin: 0 auto; /* Auto margins for horizontal centering */
+        width: 100%; /* Use full width of the body taking into account padding */
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 0; /* Remove padding on smaller screens */
         }
-    } 
+    }
 
     .center-text {
         text-align: center;
@@ -60,12 +68,6 @@
         padding-bottom: 75%; /* 4:3 Aspect Ratio */
     }
 
-    body {
-        font-family: Arial, sans-serif; /* Change this to your desired font family */
-        background-color: #ffffff;
-        color: #000000
-    }
-
 </style>
 </head>
 <body>
@@ -89,18 +91,56 @@
         <div>
             <h2>2011 (Version 3)</h2>
             <img src="2011/01.jpg" class="center-image">
-            <p>On November 8th, 2011, the third and last version of ASIMO was announced.</p>
+            <p>On November 8th, 2011, the third and final version of ASIMO was announced. Previously, ASIMO was considered to be an "automatic machine", a machine that can perform automatic tasks that are overseen by a human. Now ASIMO is considered an "autonomous machine", capable of completing tasks without the need to be observed by a person.</p>
+            <div class="image-container">
+                <img src="2011/02.jpg">
+                <img src="2011/03.jpg">
+            </div>
+            <br>
+            <img src="2011/07.jpg" class="center-image">
+            <p>Honda's development team of ASIMO was rebranded as Honda Robotics, with a focus on applying ASIMO technologies into products such as walking assists and the UX-3 personal transporter.<sup><a href="#cite_note-1">[1]</a></sup></p>
+            <!-- <p>ASIMO made its first North American debut in New York on April 17, 2014, nearly 3 years after it was unveiled.</p> -->
         </div>
         <br>
         <div>
             <h3>Hardware</h3>
-            <p>While coming in at the same height as the previous model, the weigth decreased to 48 kg.</p>
-            <p>Each hand now has 13 degrees of freedom, allowing ASIMO to do complex hand gestures and communicate in sign language. These capabilities are enabled by the switch to hydraulically actuated fingers. The pump is located somewhere in the chest, and small tubes run down the arms to the fingers. Routing the tubes within the arm so that they don't break or tangle is a very complex challenge due to the range of motion of the arm. The speed and grip strength has also increased. Tactile sensors and force sensors are installed in each finger and the palm of the hand, enabling new complex object handling.</p>
-            <p></p>
+            <img src="2011/04.jpg" class="center-image">
+            <p>While coming in at the same height as the previous model, the weigth decreased to 48 kg.<sup><a href="#cite_note-2">[2]</a></sup> The overall design of ASIMO has changed a lot, all hard edges are now rounded off and a bit bubbly.</p>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YrU1baEqQQs?si=OY9FLEMEQDIfUX7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>ASIMO can now run up to 9 km/h due to an overall strenghtening of the legs. The design of the leg mechanism has changed drastically. If you take a look at previous models, the knee joint is located in the center of the leg mass. Now it rotates around the back of the leg enclosure, leaving room in front for a linkage mechanism that transmits power from the motors that are located high in the thigh (to keep center of gravity high), down to the knee and the ankle (see variations section for visual representation).</p>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1Rd2x5VuwSU?si=v0iXE9qWL4W3_igF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <br>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-oZCoz7aMok?si=dBOOiVcs_nRjhwqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Each hand now has 13 degrees of freedom, allowing ASIMO to do complex hand gestures and communicate in sign language. These capabilities are enabled by the switch to hydraulically actuated fingers. The pump is located in the chest, and small tubes run down the arms to the fingers. Routing the tubes within the arm so that they don't break or tangle is a very complex challenge due to the range of motion of the arm. The speed and grip strength has also increased. Tactile sensors and force sensors are installed in each finger and the palm of the hand, enabling new complex object handling.<sup><a href="#cite_note-4">[4]</a></sup></p>
+            <p>Lastly, ASIMO is equipped with 8 microphones located around its head, thoughtfully placed for optimal speech detection.</p>
         </div>
         <br>
         <div>
             <h3>Software</h3>
+            <img src="2011/08.jpg" class="center-image">
+            <br>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tPsgNexp6PA?si=xzoGnONr0n7Oahg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>New control technology enables ASIMO to change the landing position of its foot midmotion. New capabilites include running backward, hopping one or two legs while turning, and properly kicking a ball. As a byproduct, this adds the ability to react to changing conditions such as walking over uneven surfaces while maintaing balance.</p>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CNXmvqnRp_Q?si=Y-VqZgHf-dfezAeT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>ASIMO can now predict the walking direction of a person a few seconds ahead, quickly avoiding collisions. The previous model had similar capabilites, however, it was limited on how far ahead it could predict, resulting in slow reaction times.</p>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4FjWRkzZ0Y?si=jxDb5-AkVq4knimy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>The addition of dextrous hands were key to its improved interaction with the world. Now having the ability to handle complex objects, ASIMO can pick up a bottle and untwist the lid with its other hand. After placing the lid down, it can then pick up a paper cup and pour the contents of the bottle into the paper cup without spilling. Lastly, ASIMO can now communicate in both English and Japanese sign language.<sup><a href="#cite_note-6">[6]</a></sup></p>
+            <div class="video-wrapper aspect-16-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4lX6XabEWok?si=DEAwAZNAzvPOr16Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Lastly, using open source software developed in-house called HARK, ASIMO is capable of listening, processing, and recognizing up to 3 different people speaking at once.<sup><a href="#cite_note-7">[7]</a></sup></p>
         </div>
         <br>
         <div>
@@ -117,16 +157,23 @@
             <div class="video-wrapper aspect-16-9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/UevFtYEimjw?si=MVog0lIam8gpWNkr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <p>The first prototype is an experimental humanoid robot based off of ASIMO 2011.<sup><a style="color:#1e63c9"; href="#cite_note-14">[14]</a></sup> The kinematic configurations and major specifications are the same, but with the addition of one axis force sensors at the hip and both shoulders, as well as other changes that have no further detail.</p>
-            <p>The same prototype is seen in a video attached to a research paper released at the IEEE International Conference on Humanoid Robots 2017. The paper describes a method of recovering from being pushed.<sup><a style="color:#1e63c9"; href="#cite_note-14">[14]</a></sup></p>
-            <p>Both the video released by Honda Research and the video by NHK seem to show the same prototype recovering from the same type of pushes, released more than 4 years apart. During ASIMO 2011's first apperance in North American on April 19th, 2014, along with providing their versioning schema for their ASIMO models, Honda claimed that ASIMO Version 4 was in early development.<sup><a style="color:#1e63c9"; href="#cite_note-15">[15]</a></sup> I believe that this "experimental humanoid robot based off of ASIMO 2011" could possibly be a very early prototype of ASIMO Version 4.</p>
+            <p>The first prototype is described as an "experimental humanoid robot based off of ASIMO 2011".<sup><a href="#cite_note-8">[8]</a></sup> The kinematic configurations and major specifications are the same, but with the addition of one axis force sensors at the hip and both shoulders, as well as other changes that have no further detail.</p>
+            <p>The same prototype is seen in a video attached to a research paper released at the IEEE International Conference on Humanoid Robots 2017. The paper describes a method of recovering from being pushed.<sup><a href="#cite_note-8">[8]</a></sup></p>
+            <p>Both the video released by Honda Research and the video by NHK seem to show the same prototype recovering from the same type of pushes, released more than 4 years apart. During ASIMO 2011's first apperance in North American on April 19th, 2014, along with providing their versioning schema for their ASIMO models, Honda claimed that ASIMO Version 4 was in early development.<sup><a href="#cite_note-9">[9]</a></sup> I believe that this "experimental humanoid robot based off of ASIMO 2011" could possibly be a very early prototype of ASIMO Version 4.</p>
             <p>Now, the second prototype is more of a research platform for experimental technologies, such as traversing uneven terrain using a laser rangefinder array. It uses the same leg design as the first protype, but it looks to be a bit taller. The general design is very reminiscent of Honda E series robots.</p>
         </div>
         <div>
             <h3>References</h3>
             <ol>
-                <li id="cite_note-14"><a style="color:#1e63c9;" href="https://www.researchgate.net/publication/322322630_Dynamic_gait_transition_between_walking_running_and_hopping_for_push_recovery">Dynamic gait transition between walking, running and hopping for push recovery</a></li>
-                <li id="cite_note-15"><a style="color:#1e63c9;" href="https://www.wired.com/2014/04/honda-asimo/">Watch the Astounding Dexterity of Honda's Dancing Humanoid Robot</a></li>            
+                <li id="cite_note-1"><a href="https://global.honda/en/newsroom/news/2011/c111108aeng.html">Honda Unveils All-new ASIMO with Significant Advancements</a></li>
+                <li id="cite_note-2"><a href="https://global.honda/jp/ASIMO/about/">About ASIMO</a></li>
+                <li id="cite_note-3"><a href="https://web.archive.org/web/20170629220742/http://world.honda.com/ASIMO/technology/2011/physical/index.html">Advancements of Physical Capabilities</a></li>
+                <li id="cite_note-4"><a href="https://web.archive.org/web/20131027011628/http://world.honda.com/ASIMO/technology/2011/performing/index.html">Improved Task Performing Capabilities</a></li>
+                <li id="cite_note-5"><a href="https://web.archive.org/web/20170630002850/http://world.honda.com/ASIMO/technology/2011/intelligence/index.html">Advancements of Intelligence Capabilities</a></li>
+                <li id="cite_note-6"><a href="https://global.honda/en/newsroom/worldnews/2014/c140417ASIMO-Makes-North-American-Debut.html">Latest Version of ASIMO Makes North American Debut in New York</a></li>
+                <li id="cite_note-7"><a href="https://www.jp.honda-ri.com/information/564/20111110/">Robot hearing technology installed in new ASIMO!</a></li>
+                <li id="cite_note-8"><a href="https://www.researchgate.net/publication/322322630_Dynamic_gait_transition_between_walking_running_and_hopping_for_push_recovery">Dynamic gait transition between walking, running and hopping for push recovery</a></li>
+                <li id="cite_note-9"><a href="https://www.wired.com/2014/04/honda-asimo/">Watch the Astounding Dexterity of Honda's Dancing Humanoid Robot</a></li>            
             </ol>
         </div>
     </div>

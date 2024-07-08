@@ -5,19 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASIMO 2004</title>
 <style>
-    /* Center the page */
-    .center-page {
-        width: 50%; /* Adjust this value to set the width of your centered page */
-        margin: 0 auto; /* This centers the element horizontally */
-        padding: 20px; /* Add padding on both sides */
-        background-color: #ffffff; /* Just for visualization */
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000;
+
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
-    @media (max-width: 600px) {
-        .center-page {
-            padding: 0; /* Remove padding on mobile */
+    .center-page {
+        max-width: 400px; /* Adjust this value as needed for your design */
+        margin: 0 auto; /* Auto margins for horizontal centering */
+        width: 100%; /* Use full width of the body taking into account padding */
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 0; /* Remove padding on smaller screens */
         }
-    } 
+    }
 
     .center-text {
         text-align: center;
@@ -60,12 +68,6 @@
         padding-bottom: 75%; /* 4:3 Aspect Ratio */
     }
 
-    body {
-        font-family: Arial, sans-serif; /* Change this to your desired font family */
-        background-color: #ffffff;
-        color: #000000
-    }
-
 </style>
 </head>
 <body>
@@ -87,9 +89,9 @@
         </table>
         <br>
         <div>
-            <h2>2004 (Version 2)</h2>
+            <h2>2004 (Prototype)</h2>
             <img src="2004/01.jpg" class="center-image">
-            <p>On December 15th, 2004, Honda announced ASIMO's second major version update. This generation is considered a research prototype and brings a total overhaul of every system: new control theory, upgraded hardware, and useful interactive functions.</p>
+            <p>On December 15th, 2004, Honda announced an ASIMO research prototype. Although the upgrades brought to this model are substantial and the exterior is the same as ASIMO 2005, it is not recognized as version 2. This model brings a total overhaul of every system onboard: new control theory, upgraded hardware, and useful interactive functions.</p>
             <div class="image-container">
                 <img src="2004/02.jpg">
                 <img src="2004/03.jpg">
@@ -109,13 +111,15 @@
             <p>Previously, all fingers were driven by a single motor, now the thumb has independent actuation enabling the hand to grasp more complex objects. The other fingers, were upgraded as well, the total gripping force is now up to 500kg per hand. There are now 2 DOF and a new force sensor installed in the wrist, making it capable determining the weight of objects, responsive handshaking, and step correction when pushed or pulled by the hand. Moving up the arm, the elbow is now double jointed, similar to ASIMO R (2003).</p>
             <img src="2004/06.jpg" class="center-image">
             <p>Now using an infrared camera, it's able to correct it's position while walking, regardless of the lighting conditions. Adding to the sensor suite are ultrasonic sensors located around the waist, more specifically, aiming behind and to the side. This gives it better awareness and obstacle avoidance.</p>
+            <img src="2004/10.jpg" class="center-image">
             <p>Some minor upgrades to the head include replacing the stereo cameras with high dynamic range ones, and adding a degree of freedom allowing ASIMO to tilt its head.</p>
-            <p>Lastly, the battery has been upgrade to a 51.8 V Lithium Ion battery that lasts up to 1 hour. It weights 6 kg, and takes 3 hours to charge.</p>
+            <p>Its new indicator lights provide more informative diagnostics. Green: low-level power on, White: boot up complete/ready for operation, Red: control power and servos on/ready to walk.<sup><a href="#cite-note-3">[3]</a></sup></p>
+            <p>Lastly, the battery has been upgrade to a 51.8 V Lithium Ion battery that lasts up to 1 hour.<sup><a href="#cite-note-3">[3]</a></sup> It weights 6 kg, and takes 3 hours to charge.</p>
         </div>
         <br>
         <div>
             <h3>Software</h3>
-            <p>A completely new posture control theory was needed to be able to run. The biggest issue when trying to increase running speed was spin slip. Spin slip is when one leg is kicking forward and the other is leaving the ground, losing preasure. Using waist rotation and arm swing counter acts those forces and controls spin slip.<sup><a href="#cite-note-3">[3]</a></sup> Other development challenges were jumping accuracy and absorbing landing impact.</p>
+            <p>A completely new posture control theory was needed to be able to run. The biggest issue when trying to increase running speed was spin slip. Spin slip is when one leg is kicking forward and the other is leaving the ground, losing preasure. Using waist rotation and arm swing counter acts those forces and controls spin slip.<sup><a href="#cite-note-4">[4]</a></sup> Other development challenges were jumping accuracy and absorbing landing impact.</p>
             <p>Equipped with greater decision planning, upgrades to the internal communication pathways were necessary for responsive behavior. With better sensor fusing, ASIMO is now able to self correct its position. A problem with previous models is that its position would drift over time while walking, meaning that where it thought it was different than where it actually was.</p>
             <p>Adding to theses improvements, you can now tell ASIMO where to go, and it will navitate there autonomously based on a prestored map. If there are objects obstructing its path, it will try and reroute.</p>
         </div>
@@ -128,7 +132,7 @@
                 <img src="2004/08.jpg">
                 <img src="2004/09.jpg">
             </div>
-            <p>The legs on this variation are, at least from the exterior, the exact same legs as ASIMO R (2003).<sup><a href="#cite-note-4">[4]</a></sup> To my knowledge, this was the only time it was seen. I am unaware of why they chose to do this, but we can speculate. Assuming that these legs were used throughout the development stage, having hardware capable of testing the new control software before the new legs were finished, it's possible there was a feature that they wanted to show off that wasn't fully reliable on the new legs, or they needed two ASIMOs on stage but only had this prototype available at the time, or something completely different. Whatever the reason, it's still interesting that two different variations of the same ASIMO model were onstage at the same time.</p>
+            <p>The legs on this variation are, at least from the exterior, the exact same legs as ASIMO R (2003).<sup><a href="#cite-note-5">[5]</a></sup> To my knowledge, this was the only time it was seen. I am unaware of why they chose to do this, but we can speculate. Assuming that these legs were used throughout the development stage, having hardware capable of testing the new control software before the new legs were finished, it's possible there was a feature that they wanted to show off that wasn't fully reliable on the new legs, or they needed two ASIMOs on stage but only had this prototype available at the time, or something completely different. Whatever the reason, it's still interesting that two different variations of the same ASIMO model were onstage at the same time.</p>
         </div>
         <br>
         <div>
@@ -136,8 +140,9 @@
             <ol>
                 <li id="cite-note-1"><a href="https://global.honda/jp/news/2004/c041215-asimo.html">Honda Announces Next-Generation ASIMO Technology</a></li>
                 <li id="cite-note-2"><a href="https://ascii.jp/elem/000/000/345/345603/">Honda unveils next-generation ASIMO technology - running at 3km per hour!</a></li>
-                <li id="cite-note-3"><a href="https://global.honda/jp/ASIMO/action/japan/2004/20041215/">Next-generation ASIMO technology announcement</a></li>
-                <li id="cite-note-4"><a href="https://pc.watch.impress.co.jp/docs/2004/1216/honda.htm">Honda unveils improved-mobility "running" ASIMO</a></li>
+                <li id="cite-note-3"><a href="https://web.archive.org/web/20170625221458/http://asimo.honda.com/inside-asimo">Inside ASIMO</a></li>
+                <li id="cite-note-4"><a href="https://global.honda/jp/ASIMO/action/japan/2004/20041215/">Next-generation ASIMO technology announcement</a></li>
+                <li id="cite-note-5"><a href="https://pc.watch.impress.co.jp/docs/2004/1216/honda.htm">Honda unveils improved-mobility "running" ASIMO</a></li>
             </ol>
         </div>
     </div>

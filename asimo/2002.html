@@ -5,19 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASIMO 2002</title>
 <style>
-    /* Center the page */
-    .center-page {
-        width: 50%; /* Adjust this value to set the width of your centered page */
-        margin: 0 auto; /* This centers the element horizontally */
-        padding: 20px; /* Add padding on both sides */
-        background-color: #ffffff; /* Just for visualization */
+    body {
+        font-family: Arial, sans-serif; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000;
+
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
-    @media (max-width: 600px) {
-        .center-page {
-            padding: 0; /* Remove padding on mobile */
+    .center-page {
+        max-width: 400px; /* Adjust this value as needed for your design */
+        margin: 0 auto; /* Auto margins for horizontal centering */
+        width: 100%; /* Use full width of the body taking into account padding */
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 0; /* Remove padding on smaller screens */
         }
-    } 
+    }
 
     .center-text {
         text-align: center;
@@ -60,12 +68,6 @@
         padding-bottom: 75%; /* 4:3 Aspect Ratio */
     }
 
-    body {
-        font-family: Arial, sans-serif; /* Change this to your desired font family */
-        background-color: #ffffff;
-        color: #000000
-    }
-
 </style>
 </head>
 <body>
@@ -86,61 +88,66 @@
             </tr>
         </table>
         <br>
-        <h2>2002 (Software Revision)</h2>
-        <div class="center-image">
-            <img src="2002/01.jpg" class="center-image">
-        </div>
-        <p>On December 5th, 2002, ASIMO was <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/2002/1205/honda.htm">upgraded</a> to track and recognize faces, and follow human gestures, like moving to where someone is pointing to or halting in place. It could also recognize the <a style="color:#1e63c9"; href="https://global.honda/jp/ASIMO/history/asimo/technology2002/index.html">posture</a> of a person and recognize its environment. Also, with added internet connectivity, it was able to provide news and weather updates.</p>
-        <p>The overall system architecture as been redeveloped. For preplanned routes, ASIMO interfaces with a external map management system located offline. It can also trigger dialogue and other tasks at given locations. However onboard, 3 separate processors handle image processing, speech recognition and synthesis, and control and planning respectively. A frame grabber is connected to the vision computer via a PCI bus.</p>
-        <br>
-        <h3>Software</h3>
-        <div class="center-image">
-            <img src="2002/02.jpg" class="center-image">
-        </div>
-        <p>The image pipeline consisted of stereo SONY XC-ES alternate 1/3" color CCDs, with a depth map generated using a SAD (Sum of Absolute values of Differences) based method on a Mobile Pentium III-M 1.2GHz. 3D objects and moving objects are then extracted by taking images from the frame grabber and processing them on the vision computer, sending necessary data to the navigation and interaction systems. In order to calculate distance and direction of objects in a scene, the image had to be synchronized with every joint angle, calculating the camera pose. With this, detecting multiple moving objects in an image was now possible. ASIMO stores the extracted objects' bounding boxes in its local map, necessary for obstacle avoidance for planning detours.</p>
-        <div class="center-image">
-            <img src="2002/03.jpg" class="center-image">
-        </div>
-        <div class="center-image">
-            <img src="2002/04.jpg" class="center-image">
-        </div>
-        <p>To track humans, they need to be extracted from the image. An optical flow based algorithm separates the foreground from the image, then Snake algorithm extracts the human shapes, separating multiple people in a scene. Face detection then uses skin color to identify face contours.</p>
-        <p>There are two gesture recognition systems. The first is 2D, recognizing gestures including handshake, hand circling, bye-bye, hand swing, high-hand and come here call. And the second is 3D, recognizing pointing gestures, using the head and hand positional relationship and the depth map to then move to the desired location.</p>
-        <p>ASIMO is capable of storing and identifying about 10 people. The database of faces and the details along with them are stored on the external management system.</p>
-        <p>The planning system is behavior based, allowing flexibility and modularity, making reactive in rapidly changing environments.</p>
-        <p>For a more in depth analysis on how each of the onboard systems work together, check out this <a style="color:#1e63c9;" href="https://www.researchgate.net/publication/3972237_The_intelligent_ASIMO_System_overview_and_integration">paper</a>.</p>
-        <br>
-        <h3>Connectivity</h3>
-        <div class="center-image">
-            <img src="2002/05.jpg" class="center-image">
-        </div>
-        <div class="image-container">
-            <img src="2002/06.jpg">
-            <img src="2002/07.jpg">
-        </div>
-        <p>It was possible for ASIMO to be <a style="color:#1e63c9"; href="https://pc.watch.impress.co.jp/docs/2002/1211/honda.htm">connected</a> via direct attach cable for video output of it's vision, along with some data overlays. It seems to use something like a D-Sub 15 pin display cable.</p>
-        <br>
-        <h3>Ancillary Equipent</h3>
-        <div class="center-image">
-            <img src="2002/08.jpg" class="center-image">
-        </div>
-        <p>Taken backstage at Robodex 2003, this shows how charging took place between performances.</p>
-        <div class="center-image">
-            <img src="2002/09.jpg" class="center-image">
-        </div>
-        <p>And this is the protective travel case for ASIMO and its peripherals.</p>
-        <br>
-        <h3>Variations</h3>
-        <!-- <div>
-            <img src="asimo/green.jpg" class="center-image">
-        </div> -->
         <div>
-            <img src="2002/10.jpg" class="center-image">
+            <h2>2002 (Updated Version 1)</h2>
+            <img src="2002/01.jpg" class="center-image">
+            <p>On December 5th, 2002, ASIMO's overall system architecture as been redeveloped with a focus on visual and planning intelligence. Now it can track and recognize faces, as well as follow human gestures, like moving to where someone is pointing to or halting in place.<sup><a href="#cite-note-1">[1]</a></sup> It could also recognize the posture of a person and recognize its environment.<sup><a href="#cite-note-2">[2]</a></sup> Also, with added internet connectivity, its able to provide news and weather updates.</p>
         </div>
-        <p>Color variations include gray, green, red and aqua.</p>
         <br>
-        <h3>Appearances</h3>
-        <p>June 1, 2005 - "Say 'Hello' to Honda's ASIMO" at Disneyland Innoventions<sup><a style="color:#1e63c9"; href="#appearance_note-2">[a2]</a></sup></p>
+        <div>
+            <h3>Hardware</h3>
+            <p>Stereo SONY XC-ES alternate 1/3" color CCDs have replaced the cameras that were previously only used for monitoring, and a Mobile Pentium III-M 1.2GHz handles image processing.<sup><a href="#cite-note-4">[4]</a></sup></p>
+            <p>Three separate processors handle image processing, speech recognition and synthesis, and control and planning respectively. A PCI bus is used to interconnect them.</p>
+            <img src="2002/05.jpg" class="center-image">
+            <div class="image-container">
+                <img src="2002/06.jpg">
+                <img src="2002/07.jpg">
+            </div>
+            <p>It was possible for ASIMO to be connected via direct attach cable for video output of it's vision, along with data overlays.<sup><a href="#cite-note-3">[3]</a></sup> It seems to use something like a D-Sub 15 pin display cable.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Software</h3>
+            <img src="2002/02.jpg" class="center-image">
+            <p>The image pipeline starts with the stereo cameras mounted on ASIMO's head. These color CCD cameras capture stereo images, which are then converted to black and white by the frame grabber to generate a depth map. To accurately utilize the images captured, the position of the cameras is determined by calculating the joint angles of ASIMO. With this information, 3D objects and moving objects are extracted by processing the images from the frame grabber on the vision computer, which sends the necessary data to the navigation and interaction systems. Since the camera pose is determined, the system can estimate the distance and direction of objects. ASIMO stores the bounding boxes of the extracted objects in its local map, which is necessary for obstacle avoidance and planning detours.<sup><a href="#cite-note-4">[4]</a></sup></p>
+            <img src="2002/03.jpg" class="center-image">
+            <br>
+            <img src="2002/04.jpg" class="center-image">
+            <p>To track humans, they need to be extracted from the image. First, one alogrithm seperates the foreground from the image, then another extracts human shapes, making sure to seperate individual people. Face detection then uses skin color to identify face contours.</p>
+            <p>There are two gesture recognition systems. The first is 2D, recognizing gestures including handshake, hand circling, bye-bye, hand swing, high-hand and come here call. And the second is 3D, recognizing pointing gestures, using the head and hand positional relationship and the depth map to then move to the desired location.</p>
+            <p>ASIMO is capable of storing and identifying about 10 people. The database of faces and the details along with them are stored on the external management system.</p>
+            <p>Lastly, the planning system is behavior based, allowing flexibility and modularity, making reactive in rapidly changing environments. For preplanned routes, ASIMO interfaces with an external map management system located offline</p>
+        </div>
+        <br>
+        <div>
+            <h3>Ancillary Equipent</h3>
+            <img src="2002/08.jpg" class="center-image">
+            <p>Taken backstage at Robodex 2003, this shows how charging took place between performances.</p>
+            <img src="2002/09.jpg" class="center-image">
+            <p>And this is the protective travel case for ASIMO and its peripherals.<sup><a href="#cite-note-5">[5]</a></sup></p>
+        </div>
+        <br>
+        <div>
+            <h3>Variations</h3>
+            <img src="2002/10.jpg" class="center-image">
+            <p>Color variations include gray, green, red and aqua.</p>
+        </div>
+        <br>
+        <div>
+            <h3>Appearances</h3>
+            <p>June 1, 2005 - <a href="https://hondanews.com/en-US/honda-corporate/releases/release-eeca433a15fdaa277096c6004c34c202-mickey-welcomes-asimo-to-disneylands-50th-anniversary-hondas-humanoid-robot-has-new">"Say 'Hello' to Honda's ASIMO" at Disneyland Innoventions</a></p>
+        </div>
+        <br>
+        <div>
+            <h3>References</h3>
+            <ol>
+                <li id="cite-note-1"><a href="https://pc.watch.impress.co.jp/docs/2002/1205/honda.htm">Honda's new ASIMO with gesture recognition and network connectivity - ASIMO's "practicality" greatly improved</a></li>
+                <li id="cite-note-2"><a href="https://global.honda/jp/ASIMO/history/asimo/technology2002/index.html">Technology announced in 2002</a></li>
+                <li id="cite-note-3"><a href="https://pc.watch.impress.co.jp/docs/2002/1211/honda.htm">Honda unveils new ASIMO features to the press - posture and gesture recognition technology demonstrated</a></li>
+                <li id="cite-note-4"><a href="https://www.researchgate.net/publication/3972237_The_intelligent_ASIMO_System_overview_and_integration">The intelligent ASIMO: System overview and integration</a></li>
+                <li id="cite-note-5"><a href="https://robotika.cz/articles/asimo/en">ASIMO in Prague</a></li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
