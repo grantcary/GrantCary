@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nvidia Jetson Orin Nano Super OS Install</title>
+<link rel="icon" type="image/x-icon" href="img/favicon-david.ico">
+<style>
+    body {
+        font-family: monospace; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000;
+
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .center-page {
+        max-width: 800px; /* Adjust this value as needed for your design */
+        margin: 0 auto; /* Auto margins for horizontal centering */
+        width: 100%; /* Use full width of the body taking into account padding */
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 0; /* Remove padding on smaller screens */
+        }
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* This centers the image horizontally */
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 50%; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .iframe-wrapper {
+        position: relative;
+        height: 0;
+    }
+    
+    .iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-wrapper {
+        position: relative;
+        height: 0;
+    }
+
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .aspect-16-9 {
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .aspect-4-3 {
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    }
+
+    .btn {
+        background-color: #d1d1d1;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    table.custom-align td:first-child, table.custom-align th:first-child {
+      text-align: left;
+    }
+
+    table.custom-align td:last-child, table.custom-align th:last-child {
+      text-align: right;
+    }
+
+</style>
+</head>
+<body>
+    <div class="center-page">
+        <br>
+        <a href="https://grantcary.com"><img src="img/me.jpeg" class="center-image" width="64" height="64" alt="rob"></a>
+        <br>
+        <h1>Nvidia Jetson Orin Nano Super OS Install</h1>
+        <p>Date written: Jan 4, 2025</p>
+        <div>
+            <h2>Story</h2>
+            <p>I've had my eye on these Nvidia Jetson boards for a while now as a replacement to my Raspberry Pi 4. So when the Jetson Orin Nano Super was announced, I jumped to order one.</p>
+            <p>I guess I was a bit naive in thinking the OS install would be like the Raspberry Pi. The first thing I did was scan the included QR code, bringing me to the <a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit">quick start guide</a>. I made the mistake of skipping the <a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit#firmware">"Update the Firmware (if needed)"</a> section, instead jumping to <a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit#write">"Write Image to the microSD Card"</a>. In my mind, I saw "(if needed)" and expected it to be something optional.</p>
+            <p>Well, I flashed my SD card with the current <a href="https://developer.nvidia.com/embedded/jetpack-sdk-61">JetPack SDK version 6.1 (rev. 1)</a>, and tried to start the installation process on the Jetson. It would freeze on the NVIDIA logo boot splash screen, sometimes with it going to a shell after a while.</p>
+            <p>The first article that really helped me was linked in the section that I skipped over at the start, the <a href="https://www.jetson-ai-lab.com/initial_setup_jon.html">Initial Setup Guide</a>. This actually got me most of the way. I was able to determine that my UEIF version was lower than 36.0, so I started following from step 2 onward. Everything was going smoothly, until the second to last step. Step 6 wants us to flash the SD card with the Jetpack 6.1 (rev.1) and install it on the Jetson. The install did not work. It would try to install, but would end in a blank screen, until it would try to install again after 10 minutes or so. So, this next part is where I had to find my own way.</p>
+            <p>I really searched for any information about upgrading from 5.x to 6.x, but every post was telling me to just use the SDK Manager. After looking at the documentation and not finding how to actually connect the Jetson to my PC, I resorted to watching some youtube tutorials. No matter what I did, my Ubuntu machine would not recognize the Jetson. Some were recommending that some versions of Ubuntu don't play nice with the USB interface, so I tried running a VM on a Windows machine, hoping that it would be recognized there. But no, people warn away from using a VM for flashing devices, not like it detected the Jetson anyway.</p>
+            <p>So with that branch coming to an end, I though I would just try brute forcing my way through things. I flashed my SD card with the standard 6.1 hoping that would work, it didn't. So I tried, 6.0, and that didn't work. There was one version left before this came to an end, giving me one more chance for this to work. So I tried installing version <a href="https://developer.nvidia.com/embedded/jetpack-sdk-60dp">6.0 DP (Developer Preview)</a>, and it worked, it installed. From there I ran ```sudo apt upgrade``` which upgraded it to standard 6.0 upon reboot. And from there I installed the 6.1 (rev. 1), following the instructions provided.</p>
+            <p>Moral of the story, always read the documentation. And if the documenation can't help, brute force. I don't know, there's no real moral to the story, but getting better at figuring this stuff out is being willing search for answers for hours, and if things come up short, having the patience to try things.</p>
+        </div>
+        <br>
+        <div>
+            <h2>Steps</h2>
+            <p>The steps are broken up into three seperate flashes, meant to be executed in order.</p>
+            <p>Note: There might be an easier way to do this, however I did try many of the recommended methods and none of them worked. This is what worked for me.</p>
+            <p>Disclaimer: I am not responsible for any of this resulting in broken hardware. This should be relatively safe, however there is always an inherent risk when flashing devices and running commands off the internet. Do your own research and use this as a rough guide.</p>
+            <h3>Flash JetPack 5.1.3</h3>
+            <p>This section is a condensed version of step 2 through 5 from the <a href="https://www.jetson-ai-lab.com/initial_setup_jon.html">Initial Setup Guide</a></p>
+            <ol>
+                <li>Flash <a href="https://developer.nvidia.com/embedded/jetpack-sdk-513">JetPack 5.1.3</a> to SD card</li>
+                <li>Insert SD card into Jetson</li>
+                <li>Power on and complete initial setup</li>
+                <li>The update should already be queued, but to check, run ```sudo systemctl status nv-l4t-bootloader-config```</li>
+                <li>Run ```sudo reboot``` command</li>
+                <li>Once logged back in, run ```sudo nvbootctrl dump-slots-info``` to check if firmware is up to date. Current version should be 35.5.0</li>
+                <li>Install QSPI updater by running this command, ```sudo apt-get install nvidia-l4t-jetson-orin-nano-qspi-updater```</li>
+                <li>Run ```sudo reboot``` command to install the update</li>
+                <li>Once it is done installing, it will try and reboot, but will get stuck in a boot cycle</li>
+                <li>Unplug Jetson</li>
+                <li>Remove SD card</li>
+            </ol>
+            <h3>Flash JetPack 6.0 DP</h3>
+            <ol>
+                <li>Flash <a href="https://developer.nvidia.com/embedded/jetpack-sdk-60dp">JetPack 6.0 DP</a> to SD card</li>
+                <li>Insert SD card into Jetson</li>
+                <li>Power on and complete initial setup</li>
+                <li>Run command ```sudo apt update && sudo apt upgrade``` to upgrade to JetPack 6.0</li>
+                <li>Run ```sudo reboot``` command</li>
+                <li>Once logged in run this command "sudo rm -rf /etc/nvpmodel.conf"</li>
+                <li>Run ```sudo reboot``` command</li>
+                <li>Once logged in run this command ```sudo shutdown now```</li>
+                <li>Once shut down, unplug Jetson</li>
+                <li>Remove SD card</li>
+            </ol>
+            <h3>Flash JetPack 6.1 (rev. 1)</h3>
+            <ol>
+                <li>Flash <a href="https://developer.nvidia.com/embedded/jetpack-sdk-61">JetPack 6.1 (rev. 1)</a> to SD card</li>
+                <li>Insert SD card into Jetson</li>
+                <li>Power on and complete initial setup</li>
+            </ol>
+        </div>
+    </div>
+</body>
