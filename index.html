@@ -3,39 +3,69 @@
 <head>
 <style>
 body {font-family: monospace}
-.img-container {
-  float: left;
-  margin-right: 10px;
-}
+  /* .img-container {
+    float: left;
+    margin-right: 10px;
+  } */
+
+  .center-page {
+          max-width: 400px; /* Adjust this value as needed for your design */
+          margin: 0 auto; /* Auto margins for horizontal centering */
+          width: 100%; /* Use full width of the body taking into account padding */
+      }
+
+  .center-text {
+      text-align: center;
+  }
+
+  .center-image {
+      display: block;
+      margin: 0 auto; /* This centers the image horizontally */
+      max-width: 100%;
+  }
+
+  .image-container {
+      display: flex;
+      justify-content: center; /* Center the images horizontally */
+  }
+
+  .image-container img {
+      width: 50%; /* Adjust image width as needed */
+      height: auto; /* Maintain aspect ratio */
+  }
+
 </style>
 
 <title>grant cary</title>
 <link rel="icon" type="image/x-icon" href="img/favicon-david.ico">
 
 </head>
-
-<h1>Grant Cary</h1>
 <body>
-<div class="img-container">
-  <img src="img/me.jpeg" width="300" height="300" alt="me">
-</div>
-<b><big><big>About me:</big></big></b>
-<p>24 years old</p>
-<p>Orange County, CA</p>
-<p>Professional videographer for 8 years</p>
-<p>Software developer for 3 years</p>
-<p>Robotics and computer graphics</p>
-<p>Internet and media archivist</p>
-<div style="clear:both"></div>
-<br/>
-<b>Checkout my stuff:</b>
-<div style="margin-left: 20px;">
-  <p><a style="color:#a4b002;" href="https://www.instagram.com/iamgrantcary/">Instagram</a></p>
-  <p><a style="color:#a4b002;" href="https://github.com/grantcary">GitHub</a></p>
-  <p><a style="color:#a4b002;" href="https://www.youtube.com/@grantcary">YouTube</a></p>
-  <p><a style="color:#a4b002;" href="https://www.robotrepository.com/">Robot Repository</a></p>
-  <p><a style="color:#a4b002;" href="jetson-orin-nano-super-os-install.html">Nvidia Jetson Orin Nano OS Install</a></p>
-</div>
-
+  <div class="center-page">
+    <h1 class="center-text">Grant Cary</h1>
+    <div class="img-container">
+      <img src="img/me.jpeg" width="300" height="300" alt="me" class="center-image">
+    </div>
+    <br><br>
+    <div>
+      <h2>About me:</h2>
+      <p>24 years old</p>
+      <p>Orange County, CA</p>
+      <p>Professional videographer for 9 years</p>
+      <p>Software developer for 3 years</p>
+      <p>Robotics and computer graphics</p>
+      <p>Overall tinkerer and lover of technology</p>
+      <div style="clear:both"></div>
+      <br/>
+      <b>Checkout my stuff:</b>
+      <div style="margin-left: 20px;">
+        <p><a style="color:#a4b002;" href="https://www.instagram.com/iamgrantcary/">Instagram</a></p>
+        <p><a style="color:#a4b002;" href="https://github.com/grantcary">GitHub</a></p>
+        <p><a style="color:#a4b002;" href="https://www.youtube.com/@grantcary">YouTube</a></p>
+        <p><a style="color:#a4b002;" href="https://www.robotrepository.com/">Robot Repository</a></p>
+        <p><a style="color:#a4b002;" href="jetson-orin-nano-super-os-install.html">Nvidia Jetson Orin Nano OS Install</a></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
