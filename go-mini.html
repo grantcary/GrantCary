@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Mini</title>
+<link rel="icon" type="image/x-icon" href="img/favicon-david.ico">
+<style>
+    body {
+        font-family: monospace; /* Change this to your desired font family */
+        background-color: #ffffff;
+        color: #000000;
+
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .center-page {
+        max-width: 800px; /* Adjust this value as needed for your design */
+        margin: 0 auto; /* Auto margins for horizontal centering */
+        width: 100%; /* Use full width of the body taking into account padding */
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding: 0; /* Remove padding on smaller screens */
+        }
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-image {
+        display: block;
+        margin: 0 auto; /* This centers the image horizontally */
+        max-width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 50%; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .iframe-wrapper {
+        position: relative;
+        height: 0;
+    }
+    
+    .iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-wrapper {
+        position: relative;
+        height: 0;
+    }
+
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .aspect-16-9 {
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .aspect-4-3 {
+        padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    }
+
+    .btn {
+        background-color: #d1d1d1;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    table.custom-align td:first-child, table.custom-align th:first-child {
+      text-align: left;
+    }
+
+    table.custom-align td:last-child, table.custom-align th:last-child {
+      text-align: right;
+    }
+
+</style>
+</head>
+<body>
+    <div class="center-page">
+        <br>
+        <a href="https://grantcary.com"><img src="img/me.jpeg" class="center-image" width="64" height="64" alt="rob"></a>
+        <br>
+        <h1>Go Mini</h1>
+        <div>
+            <!-- <h2>The Beginning</h2> -->
+            <i style="color: #939393">Warning: Some of the choices I made along the way may enrage you, and I don't blame you. I was (and honestly still am) a noob with a little bit of spending money, sometimes I end up buying myself out of problems I could have solved while spending no money. For better or for worse, this is the path I took.</i>
+            <div>
+                <h2>First Server</h2>
+                <p>A few years ago during covid, I was an avid watcher of <a href="https://geohot.com/">George Hotz</a>, a well known hacker who started an aftermarket self driving car company called <a Href="https://www.comma.ai">Comma AI</a>.</p>
+                <p>My home labbing journey begins with this video, a live stream announcing a garage sale hosted at the Comma AI office in downtown San Diego. They were moving to their current office in Old Town. I spotted a few <a href="https://lambda.ai/">Lambda Labs</a> workstation PC's (RIP to their purchasable hardware, they went all in on cloud) that they were going to be selling, and at the time I wanted to build out a Blender render machine. Up to this point, I thought homelabbing was where you hooked up a Synology NAS up to your network and called it a day. How wrong I was.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_clYhOmLae4?si=Wp6yKcIhNnKedR4H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>So on February 27th, 2022, I made the trek down to San Diego. The event was super fun, it was a good to meet some other people who were more technically inclined than the people I'm around on a daily basis. Met the Comma team, Adeeb Shihadeh, Harald Schäfer, George told me how much he enjoyed using these Lambda machines. Aparently it, along with the others that were being sold, were their training machines for some early versions of <a href="https://comma.ai/openpilot">openpilot</a>. Cool to own a bit of history.</p>
+                <img src="img/IMG_0401.JPG" width="300">
+                <p>Turns out they had more machines than I had seen on the video, but this is the machine I ended up with for a sweet $250. Included was a Corsair Carbide Air 240 case, Intel Core i7-6850K, ASUS X99-E-10G WS motherboard, 32GB of RAM, and an EVGA SuperNOVA 1600 T2 power supply. Very good deal, especially for the time. It obvously didn't come with the GPUs it originally came with, so I also picked up an Nvidia 1050 and a Quadro 4000 2GB.</p>
+                <img src="img/IMG_0410.JPG" width="300">
+                <img src="img/IMG_0413.JPG" width="300">
+                <p>I even got my own Comma frisbee and an Nvidia 3090 box that I used to fake flex on my friends (remember the great GPU shortage of 2021).</p>
+                <img src="img/IMG_0405.JPG" width="300">
+                <p>This was a live stream from the garage sale while I was there. You can actually see me in the beige sweater, keeling down, looking at my workstation at <a href="https://youtu.be/fHpGbiOQN5g?si=ocdn4Sn85PZPca_Y&t=66">1:06</a>, as well as the 1050 and Quadro that George picks up at <a href="https://youtu.be/fHpGbiOQN5g?si=DZNYwGqhng045KaK&t=74">1:14</a>, I ended up with those. Looking back, I wish I picked up one of those Nvidia Jetson TX2s, but didn't see them.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fHpGbiOQN5g?si=pLXl754_4ONQcb_x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>By this time, my goal went from render farm to file server based on the fact that I couldn't source the necessary GPUs without going broke. So I fitted it with a Crucial 1TB NVMe SSD and two Crucial 4TB SATA SSDs, installed Ubuntu 20.04, mirrored the SATA drives using ZFS, then started up a samba share. I set up a shell script that would back everything up to Backblaze B2 nightly using cron.</p>
+                <p>The first real upgrade I did to the workstation was change out the cooler, it came with the standard crappy box cpu cooler, and it was sort of broken and rattled when it was on. So I replaced it with Noctua NH-U12S.</p>
+                <p>Then I realized, why only have a file server, when I can also run a local LLM! The motherboard is PCIe Gen 3 and can run 4 graphics card at the full x16. Doing some looking, the 2080 Ti had the best price to power ratio. So I bought A Gigabyte 2080 Ti OC Turbo Edition, a blower card. I had planned to get three more and build it out properly, but after I bought the first one, I kind of lost steam on the local LLM project. I will possibly revisit this in the future.</p>
+                <p>As much as I love the Corsair case, the PCIe card slot backplate was ever so slightly warped so that in order to screw in the graphics card, you needed to forcably press in the back of the case. Then after you screw it in and stop pressing the back of the case, it puts a lot of stress on the PCIe slot on the motherboard, almost like it's trying to rip it off. So, I transplanted everything to Fractal Meshify 2 XL. I would have loved to put it into something smaller, but this was the only model that supported the motherboard size.</p>
+            </div>
+            <div>
+                <h2>Networking, Networking, Networking</h2>
+                <p>Up to this point I was using a UniFi Flex Mini. The LAN ports had my main PC, the server, and an access point, and then the WAN port being connected to my internet provider's modem/router/wifi access point garbage. What I didn't realize is that whoever installed the main AP set up the guest WIFI network without a password and it was not isolated, meaning that anyone walking by or driving by my house could access everything on my network.</p>
+                <p>Now obvously the first thing I did was set a password on the guest network and isolate it, but it made me think more about security. Other than having overall network security, I wanted to be able to seperate my server from the rest of my home network, limiting access to my office. That's when I learned about VLANs, I also learned that my flex mini was capable of VLANs. However what I learned is that you need a switch capable of level 3 switching to enable this feature.</p>
+                <p>That's when I bought the UniFi Switch Pro 24. Overkill. I really didn't need anything more than 4 ports, but needed the switching capabilities, and as far as I knew this was the cheapest way to accomplish this in Ubiquiti land. Then, I realized that I couldn't set up VLANs using the switch alone, so I set up UniFi controller on my server, and I could not for the life of me figure out how to adopt the switch. I don't really remember what the issue was, weather the feature wasn't available (though I imagine it was, why name it UniFi controller if you can't control your UniFi stuff), a bug, or if it was my own incompetence, but it didn't work. It was returned as soon as I could.</p>
+                <p>Enter the Dream Machine Special Edition. Finally what I was looking for, something I could fiddle with to my heart's content and solves all my problems. Adding the Dream Machine downstream of my ISP's router already accomplishes what I set out to do with a VLAN, isolation from the main network.</p>
+                <img src="img/IMG_0272.JPG" width="300">
+                <p>I also made the jump to 10GbE, adding on the Flex XG and installing a dual 10GbE network card onto my main PC, my server already has dual 10GbE on the motherboard. Then I realized, I couldn't push my mirrored SATA SSD's anywhere close to the limit of 10 Gig.</p>
+            </div>
+            <div>
+                <h2>Mini Everything</h2>
+                <p>Late 2024, my priorities began to change. I realized that I didn't really need a heater of a set up making noise in my room 24/7, let alone the fact that this isn't the most power efficient set up possible. I took a look at what I actually use this server for, and it really comes down to hosting the samba share, which had less than 4TB used.</p>
+                <p>So, to flesh out my parameters, I wanted an all NVMe SSD server, based on the fact that I couldn't fully utilize my 10GbE network, something silent or near silent, and something that is small and power efficient. So I started to look into mini PCs, and MinisForum UM790 Pro seemed to be the best option for me.</p>
+                <p>Downsizing only the server wasn't enough, luckily Ubiquiti had just released the Cloud Gateway Max, a better, smaller Dream Machine. Sadly, it came out just after the return window for the Dream Machine Special Edition.</p>
+                <img src="img/IMG_1027.JPG" width="600">
+                <p>While running Ubuntu file server raw is great, I knew it was time to move to something built for storage. TrueNAS Core was what I went with. Before comitting, I installed Proxmox and tinkered for a few days before my SSDs arrived.</p>
+                <p>I decided to fit the MinisForum with dual WD Black 8TB NVMe SSDs, luckily they were on sale. Based off of my current usage, 8TB was already more than double. And this is sort of where I didn't realize the limitations of this form factor, after buying everything I realized I needed a boot drive. The TrueNAS forums were shying away from the idea of using a USB stick as a boot drive, citing poor read/write endurance. So I decided that if endurance was the issue, why not use an solid state flash drive? SanDisk makes one, so that's what I used as the boot drive.</p>
+                <img src="img/IMG_1025.JPG" width="600">
+                <p>I still have things I need to change, like I need to add a 10GbE adapter to get the full usage out of those NVMe drives. I also want to try and replace the WIFI card that resides in an M.2 2230 slot with a small NVMe SSD to replace the usb flash drive as the boot drive. I'm unsure if it will work, but I don't see why not.</p>
+                <p>The moral of my story, I don't really know what I am doing, but I'm having fun. As well as, go mini, it's ok to downsize. Though this was more expensive than it really needed to be, and I could have gotten a better value with HDDs, it fit within my current needs. Most of the time, you don't need the biggest, craziest gear, I learned this the hard way over many years and many thousands wasted with camera gear, and I will continue to learn this. I still have the original server, so if I want to tinker I can, but my new one won't take more than it's value.
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
